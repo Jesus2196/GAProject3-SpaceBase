@@ -116,7 +116,6 @@ class PlanetMissionUpdate(LoginRequiredMixin, UpdateView):
     fields = ['mission']
     
 
-
 class PlanetCreate(LoginRequiredMixin, CreateView):
     model = Planet
     fields = ['name', 'planet_type', 'mass',
