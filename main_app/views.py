@@ -111,6 +111,11 @@ def planets_detail(request, planet_id):
     })
 
 
+class PlanetMissionUpdate(LoginRequiredMixin, UpdateView):
+    model = Planet
+    fields = ['mission']
+
+
 class PlanetCreate(LoginRequiredMixin, CreateView):
     model = Planet
     fields = ['name', 'planet_type', 'mass',
@@ -151,6 +156,7 @@ def satellites_detail(request, satellite_id):
         'satellite_mission_form': satellite_mission_form,
         'object': satellite
     })
+
 
 class SatelliteMissionUpdate(LoginRequiredMixin, UpdateView):
     model = Satellite
