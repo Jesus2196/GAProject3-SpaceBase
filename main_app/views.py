@@ -114,6 +114,7 @@ def planets_detail(request, planet_id):
 class PlanetMissionUpdate(LoginRequiredMixin, UpdateView):
     model = Planet
     fields = ['mission']
+    
 
 
 class PlanetCreate(LoginRequiredMixin, CreateView):
